@@ -1,4 +1,4 @@
-const { allPass, range, map, compose, forEach, slice } = require("ramda");
+const { allPass, range, map, compose, slice } = require("ramda");
 
 function isBuzz(num) {
   return num % 3 === 0;
