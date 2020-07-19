@@ -34,6 +34,7 @@ const program = compose(map(getAndLog), range);
 (function() {
   const [start, end] = slice(2, 4, process.argv);
   program(Number.parseInt(start), Number.parseInt(end));
+  console.log(JSON.stringify(program(Number.parseInt(start), Number.parseInt(end))));
 })();
 
 module.exports = {

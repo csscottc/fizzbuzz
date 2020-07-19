@@ -20,8 +20,7 @@ describe("isFizz returns true on number wholly divisible by 5",() => {
 
 describe("program", () => {
     it("works", () => {
-        console.log(program(0,10));
-        
-        // expect(program(0,10)).(["1","2","Buzz","4","Fizz","Buzz","7","8","Buzz"]);
+        console.log(JSON.stringify(program(1,10)));
+        expect(JSON.stringify(program(1,10))).toBe(`["1","2","Buzz","4","Fizz","Buzz","7","8","Buzz"]`);
     })
 });
