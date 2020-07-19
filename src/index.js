@@ -1,4 +1,4 @@
-const { allPass, range, map, compose, forEach } = require("ramda");
+const { allPass, range, map, compose, forEach, slice } = require("ramda");
 
 function isBuzz(num) {
   return num % 3 === 0;
@@ -28,16 +28,16 @@ function log(line) {
   return line;
 }
 
+const getAndLog = compose(log, getText);
+const program = compose(map(getAndLog), range);
+
 (function() {
-  console.log("IIFE");
-  const getAndLog = compose(log, getText);
-  const [ start, end ] = process.argv.slice(2);
-  console.log(process.argv.slice(2));
-  map(getAndLog, range(Number.parseInt(start), Number.parseInt(end)));
-  forEach(getAndLog, range(Number.parseInt(start), Number.parseInt(end)));
+  const [start, end] = slice(2, 4, process.argv);
+  program(Number.parseInt(start), Number.parseInt(end));
 })();
 
 module.exports = {
   isFizz,
-  isBuzz
-}
+  isBuzz,
+  program
+};
