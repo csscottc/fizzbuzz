@@ -36,3 +36,8 @@ function log(line) {
   map(getAndLog, range(Number.parseInt(start), Number.parseInt(end)));
   forEach(getAndLog, range(Number.parseInt(start), Number.parseInt(end)));
 })();
+
+module.exports = {
+  isFizz,
+  isBuzz
+}
