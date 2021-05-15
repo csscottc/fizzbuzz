@@ -1,4 +1,3 @@
-
 function isBuzz(num) {
   return num % 3 === 0;
 }
