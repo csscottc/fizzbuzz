@@ -1,12 +1,6 @@
 const { allPass, range, map, compose, slice } = require("ramda");
-
-function isBuzz(num) {
-  return num % 3 === 0;
-}
-
-function isFizz(num) {
-  return num % 5 === 0;
-}
+const isBuzz = require("./isBuzz");
+const isFizz = require("./isFizz");
 
 const isFizzBuzz = allPass([isBuzz, isFizz]);
 
@@ -38,7 +32,6 @@ const program = compose(map(getAndLog), range);
 })();
 
 module.exports = {
-  isFizz,
-  isBuzz,
+  getText,
   program
 };
