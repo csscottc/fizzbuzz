@@ -4,6 +4,7 @@
   "description": "Functional Fizz Buzz",
   "main": "index.js",
   "scripts": {
+    "fmt": "prettier **/*.js -w",
     "test": "jest"
   },
   "author": "Scott Carpenter",
@@ -12,6 +13,7 @@
     "ramda": "^0.27.0"
   },
   "devDependencies": {
+    "prettier": "^2.3.0",
     "jest": "^26.1.0"
   }
 }
